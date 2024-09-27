@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paper Title and Video Demo</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,12 +31,12 @@
         }
         .authors {
             font-size: 1.2em;
-            color: #555; /* 深灰色字体 */
+            color: #555;
             margin: 10px 0;
         }
         .school {
             font-size: 1.2em;
-            color: #555; /* 深灰色字体 */
+            color: #555;
         }
         .authors sup {
             font-size: 0.8em;
@@ -42,10 +45,10 @@
             margin: 40px 0;
         }
         .pipeline-section h2 {
-            font-size: 2em;
+            font-size: 2em; /* Pipeline 标题字体大小 */
             margin-bottom: 20px;
-            color: #000; /* 黑色 */
-            font-weight: bold; /* 字体加粗 */
+            color: #000;
+            font-weight: bold;
         }
         .pipeline-img {
             width: 80%;
@@ -53,19 +56,28 @@
             border: 2px solid #ddd;
             border-radius: 10px;
         }
+        .pipeline-description {
+            font-size: 0.9em;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+            line-height: 1.5;
+            padding: 10px 0;
+        }
         .video-section {
             margin-top: 60px;
         }
         .main-video-title {
-            font-size: 2em; /* 与 pipeline 标题保持一致 */
-            margin-bottom: 20px; /* 与 pipeline 标题保持一致 */
-            color: #000; /* 黑色字体，与 pipeline 保持一致 */
-            font-weight: bold; /* 加粗，与 pipeline 标题保持一致 */
+            font-size: 2em !important; /* 强制 Video Results 的字体大小为 2em */
+            margin-bottom: 20px;
+            color: #000 !important; /* 确保颜色是黑色 */
+            font-weight: bold;
         }
         .video-section h2 {
-            font-size: 1.5em; /* 将视频标题字体变小 */
-            color: #8B4513; /* 棕色字体 */
-            margin-bottom: 15px; /* 调整视频标题与视频间距 */
+            font-size: 1.5em;
+            color: #8B4513;
+            margin-bottom: 15px;
         }
         video {
             width: 80%;
@@ -93,6 +105,9 @@
     <div class="pipeline-section">
         <h2>Pipeline</h2>
         <img class="pipeline-img" src="/CPIG/pipeline.png">
+        <div class="pipeline-description">
+            The overview of our method. Given an input image \(I\), CPIG first employs an encoder \(E\) to project the input image to the latent vector \(w_i\), which could be reconstructed by the EG3D. \(\alpha/\beta\) represents the randomly initialized geometry weight or appearance weight. Based on the learnable latent bases \(B_{geo}\)/\(B_{app}\), the geometry/appearance direction module formulates a geometry/appearance semantic direction \(w_g/w_a\) using a linear composition strategy. Note that \(w_g\) or \(w_a\) can be added to \(w_i\) together to ensure the generated images possess the desired attributes expected in \(w_g\) and \(w_a\).
+        </div>
     </div>
 
     <!-- Video Results Title -->
