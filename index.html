@@ -53,15 +53,6 @@
             border: 2px solid #ddd;
             border-radius: 10px;
         }
-        .pipeline-description {
-            font-size: 1em; /* 字体变小 */
-            color: #888; /* 灰色字体 */
-            margin-top: 10px;
-            width: 80%;
-            max-width: 800px;
-            margin: 10px auto; /* 确保宽度与 pipeline 图片一致 */
-            text-align: left; /* 使文字对齐 */
-        }
         .video-section {
             margin-top: 60px;
         }
@@ -98,13 +89,10 @@
         </div>
     </div>
 
-    <!-- Pipeline Section with Image and Description -->
+    <!-- Pipeline Section with Image -->
     <div class="pipeline-section">
         <h2>Pipeline</h2>
         <img class="pipeline-img" src="CPIG/pipeline.png" alt="Pipeline Diagram">
-        <div class="pipeline-description">
-            The overview of our method. Given an input image $I$, CPIG first employs an encoder $E$ to project the input image to the latent vector $w_i$, which could be reconstructed by the EG3D. $\alpha/\beta$ represents the randomly initialized geometry weight or appearance weight. Based on the learnable latent bases $B_{geo}$/$B_{app}$, the geometry/ appearance direction module formulates a geometry/appearance semantic direction $w_g/w_a$ using a linear composition strategy. Note that $w_g$ or $w_a$ can be added to $w_i$ together to ensure the generated images possess the desired attributes expected in $w_g$ and $w_a$.
-        </div>
     </div>
 
     <!-- Video Results Title -->
