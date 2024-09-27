@@ -13,29 +13,59 @@
             text-align: center;
         }
         .header {
-            background-color: #e0e0e0; /* 浅灰色背景 */
-            color: #000; /* 黑色字体 */
+            background-color: #e0e0e0;
+            color: #000;
             padding: 20px;
-            margin: 0; /* 移除多余的白色空白 */
+            margin: 0;
         }
         h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
-            color: #000; /* 纯黑色字体 */
+            color: #000;
+        }
+        .title-second-line {
+            display: block;
         }
         .authors {
             font-size: 1.2em;
-            color: #000; /* 黑色字体 */
+            color: #555; /* 深灰色字体 */
+            margin: 10px 0;
+        }
+        .school {
+            font-size: 1.2em;
+            color: #555; /* 深灰色字体 */
         }
         .authors sup {
-            font-size: 0.8em; /* 调整上标大小 */
+            font-size: 0.8em;
+        }
+        .pipeline-section {
+            margin: 40px 0;
+        }
+        .pipeline-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #000; /* 黑色 */
+            font-weight: bold; /* 字体加粗 */
+        }
+        .pipeline-img {
+            width: 80%;
+            max-width: 800px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
         }
         .video-section {
-            margin-top: 60px; /* 增加顶部间距 */
+            margin-top: 60px;
+        }
+        .main-video-title {
+            font-size: 2em; /* 与 pipeline 标题保持一致 */
+            margin-bottom: 20px; /* 与 pipeline 标题保持一致 */
+            color: #000; /* 黑色字体，与 pipeline 保持一致 */
+            font-weight: bold; /* 加粗，与 pipeline 标题保持一致 */
         }
         .video-section h2 {
-            font-size: 2em; /* 增大“Video Demo”字体 */
-            margin-bottom: 20px; /* 增加与视频的间距 */
+            font-size: 1.5em; /* 将视频标题字体变小 */
+            color: #8B4513; /* 棕色字体 */
+            margin-bottom: 15px; /* 调整视频标题与视频间距 */
         }
         video {
             width: 80%;
@@ -50,21 +80,31 @@
 
     <!-- Paper Title and Authors with Light Gray Background -->
     <div class="header">
-        <h1>CPIG: Controlling the Portrait Image Generation by Distilling 3D GAN’s Latent Directions</h1>
+        <h1>CPIG: Controlling the Portrait Image Generation <br class="title-second-line">by Distilling 3D GAN’s Latent Directions</h1>
         <div class="authors">
             Ruiyan Wang<sup>†</sup>, Jun Ling<sup>†</sup>, Rong Xie, and Li Song<sup>*</sup>
         </div>
+        <div class="school">
+            Shanghai Jiao Tong University
+        </div>
     </div>
 
-    <!-- Video Demo Section with Two Videos -->
+    <!-- Pipeline Section with Image -->
+    <div class="pipeline-section">
+        <h2>Pipeline</h2>
+        <img class="pipeline-img" src="/CPIG/pipeline.png">
+    </div>
+
+    <!-- Video Results Title -->
     <div class="video-section">
+        <h2 class="main-video-title">Video Results</h2>
+
         <h2>Multi-view Results</h2>
         <video controls>
             <source src="/CPIG/video_v61_2.mp4">
             Your browser does not support the video tag.
         </video>
 
-    
         <h2>Attribute Interpolation Results</h2>
         <video controls>
             <source src="/CPIG/video_v62_2.mp4">
@@ -74,4 +114,3 @@
 
 </body>
 </html>
-
